@@ -1,0 +1,89 @@
+{
+	"ip": "127.0.0.1",
+	"list": [{
+			"key": "b",
+			"name": "bootstrap-css-min",
+			"url": "http://{ip}/css/bootstrap/bootstrap.min.css"
+		},
+		{
+			"key": "b",
+			"name": "bootstrap-js-min",
+			"url": "http://{ip}/js/bootstrap/bootstrap.min.js"
+		},
+		{
+			"key": "a",
+			"name": "animate-css",
+			"url": "http://{ip}/css/animate/animate.css"
+		},
+		{
+			"key": "j",
+			"name": "jquery",
+			"url": "http://{ip}/js/jquery/jquery.min.js"
+		},
+		{
+			"key": "v",
+			"name": "vue",
+			"url": "http://{ip}/js/vue/vue.min.js"
+		},
+		{
+			"key": "a",
+			"name": "artTemplate",
+			"url": "http://{ip}/js/template/artTemplate.min.js"
+		},
+		{
+			"key": "e",
+			"name": "echart-min",
+			"url": "http://{ip}/js/echart/echarts.min.js"
+		},
+		{
+			"key": "e",
+			"name": "echart-gl-min",
+			"url": "http://{ip}/js/echart/echarts-gl.min.js"
+		},
+		{
+			"key": "f",
+			"name": "font-awesome",
+			"url": "http://{ip}/css/font-awesome/font-awesome.min.css"
+		},
+		{
+			"key": "f",
+			"name": "font-awesome-ie7",
+			"url": "http://{ip}/css/font-awesome/font-awesome-ie7.min.css"
+		},
+		{
+			"key": "t",
+			"name": "three",
+			"url": "http://{ip}/js/three/three.min.js"
+		},
+		{
+			"key": "v",
+			"name": "video",
+			"url": "http://{ip}/js/video/video.js"
+		},
+		{
+			"key": "k",
+			"name": "knockout",
+			"url": "http://{ip}/js/knockout/knockout.min.js"
+		},
+		{
+			"key": "r",
+			"name": "require",
+			"url": "http://{ip}/js/require/require.min.js"
+		},
+		{
+			"key": "j",
+			"name": "jquery-lazyload",
+			"url": "http://{ip}/js/jquery/jquery.lazyload.min.js"
+		},
+		{
+			"key": "d",
+			"name": "d3",
+			"url": "http://{ip}/js/d3/d3.min.js"
+		},
+		{
+			"key": "b",
+			"name": "bootstrap-js-min",
+			"url": "http://{ip}/js/bootstrap/bootstrap.min.js"
+		}
+	]
+}
