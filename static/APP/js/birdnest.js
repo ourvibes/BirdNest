@@ -63,11 +63,11 @@ const handleError = () => {
 }
 
 const frame = (list = []) => {
-	const create = (_) => createEle('div', {
+	const create = (dom) => createEle('div', {
 		className: "row animated fadeInUp",
-		innerHTML: _.innerHTML
+		innerHTML: dom.innerHTML
 	})
-	const append = (_) => frag.appendChild(_)
+	const append = (node) => frag.appendChild(node)
 	const pack = compose(append, create)
 	list.forEach(it => pack(it))
 	const insert = () => $container.appendChild(frag)
