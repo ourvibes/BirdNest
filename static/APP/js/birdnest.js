@@ -74,7 +74,7 @@ const frame = (list = []) => {
   window.requestAnimationFrame(insert)
 }
 
-const gupTurbo = (action) => {
+const gpuTurbo = (action) => {
   switch (action) {
     case OPEN_GPU_TURBO:
       $container.style.willChange = 'contents, opacity, transform, scroll-position'
@@ -99,10 +99,10 @@ const defer = (fn, delay = 0) => {
 const render = ({ list = [] }) => {
   const len = list.length
   if (len <= 0) return handleError()
-  gupTurbo(OPEN_GPU_TURBO)
+  gpuTurbo(OPEN_GPU_TURBO)
   if (len < CHUNK_COUNT) {
     frame(list)
-    gupTurbo(CLOSE_GPU_TURBO)
+    gpuTurbo(CLOSE_GPU_TURBO)
     initFooter()
   } else {
     const slices = (p) => list.splice(0, parseInt(p * len, 10))
@@ -114,7 +114,7 @@ const render = ({ list = [] }) => {
         defer(() => frame(list), FPS * 900)
       ])
       .then(() => {
-        gupTurbo(CLOSE_GPU_TURBO)
+        gpuTurbo(CLOSE_GPU_TURBO)
         initFooter()
       })
   }
