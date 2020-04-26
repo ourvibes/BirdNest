@@ -69,22 +69,17 @@ const frame = (list = []) => {
   })
   const append = (node) => frag.appendChild(node)
   const pack = compose(append, create)
-  list.forEach(it => pack(it))
+  list.forEach(pack)
   const insert = () => $container.appendChild(frag)
   window.requestAnimationFrame(insert)
 }
 
 const gpuTurbo = (action) => {
-  switch (action) {
-    case OPEN_GPU_TURBO:
-      $container.style.willChange = 'contents, opacity, transform, scroll-position'
-      break;
-    case CLOSE_GPU_TURBO:
-      $container.style.willChange = 'auto'
-      break;
-    default:
-      break;
+  const eventMap = {
+    OPEN_GPU_TURBO: 'contents, opacity, transform, scroll-position',
+    CLOSE_GPU_TURBO: 'auto'
   }
+  $container.style.willChange = eventMap[action]
 }
 
 const defer = (fn, delay = 0) => {
@@ -148,10 +143,6 @@ const debounce = (fn, delay) => {
 }
 
 const loader = () => {
-  if (!fetch) {
-    handleError()
-    throw new Error('Sorry. Your browser does not support fetch.')
-  }
   fetch(URL)
     .then((resp) => {
       if ((resp.status >= 200 && resp.status < 300) || resp.status == 304) {
